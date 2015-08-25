@@ -1,4 +1,4 @@
-comment vas tu ?|A)bien B)nul C)non|C
+How are you ?|A)Good B)nop C)lala|C
 rouge vert ou noir ?|A)rouge B)vert C)noir|B
 Qui a gagne la coupe du monde de handball ?|A)fr B)it C)sp|A
 Ou allons nous|A)Paris B)Lens C)Madrid |C

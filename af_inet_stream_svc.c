@@ -1,11 +1,10 @@
 /**
  * \file af_inet_stream_svc.c
- * \brief Serveur qui va recevoir des requetes du client et lui renvoyer les donnees demandees 
+ * \brief This is the server file which will receive the request
  * \author Dzik Timothee
  * \version finale
  * \date 06/02/2015
  *
- * Jeu Question/Reponse MCS3 Dzik Timothee Rafrafi Soukaina
  *
  */
 #include "cst_in.h"
@@ -18,10 +17,10 @@ char questionRandom[500] = "";
 
 /**
  * \fn void myProfile (const char * pseudo)
- * \brief Permet de renseigner l'utilisateur sur son pseudo/partiegagnee/perdues/score
+ * \brief return pseudo/games won/games lost/score
  *
  * \author Dzik Timothee
- * \param pseudo pseudo de l'utilisateur
+ * \param pseudo user pseudo
  *
  * \return
  */
@@ -41,14 +40,14 @@ void myProfile(char* pseudo){
         } 
         fclose(fichier);
     } else {
-        printf("Erreur dans la lecture\n");
+        printf("Error while reading file\n");
     }
     
 }
 
 /**
  * \fn void question_Random()
- * \brief Permet de renseigner l'utilisateur sur son partiegagnee/perdues/score
+ * \brief Random question
  * \author Dzik Timothee
  * \return
  */
@@ -69,17 +68,16 @@ void question_Random(){
     }
     else
     {
-        // On affiche un message d'erreur si on veut
-        printf("Impossible d'ouvrir le fichier test.txt");
+        printf("Error while reading question.txt");
         
     }
 }
 
 /**
  * \fn void creationProfile (const char * pseudo)
- * \brief Permet de creer un profile
+ * \brief Create profile
  *
- * \param pseudo pseudo du nouvel utilisateur
+ * \param pseudo
  * \author Dzik Timothee
  * \return
  */
@@ -107,9 +105,9 @@ void creationProfile(char* pseudo){
 
 /**
  * \fn int incrementePerdu (const char pseudo[])
- * \brief permet de mettre a jour la base de donnees situees sur le serveur lorsqu'un utilisateur se trompe 
+ * \brief Increment lost game in txt db
  *
- * \param pseudo pseudo du player
+ * \param pseudo pseudo player
  * \author Dzik Timothee
  *
  * \return
@@ -149,7 +147,7 @@ int incrementePerdu(char pseudo[]) {
 
 /**
  * \fn int incrementeGagne (const char pseudo[])
- * \brief permet de mettre a jour la base de donnees situees sur le serveur lorsqu'un utilisateur repond correctement 
+ * \brief Increment win game in txt db
  *
  * \param pseudo pseudo du player
  *
@@ -190,7 +188,7 @@ int incrementeGagne(char pseudo[]) {
 
 /**
  * \fn void bestscore()
- * \brief renvoie le BestScore de la forme pseudo|sonscore
+ * \brief bestscore of all users
  *
  *return
  */
@@ -238,7 +236,7 @@ void bestscore(){
 
 /**
  * \fn char* pseudo_existant (const char* pseudo)
- * \brief verifie si le client donne appartien a la base de donnee situee sur le serveur
+ * \brief Check if the pseudo exist
  *
  *\return oui si le pseudo existe| Pseudo inexistant si le pseudo existe deja
  */
@@ -274,7 +272,7 @@ char* pseudo_existant(char* pseudo){
 
 /**
  * \fn int main ()
- * \brief main , il receptionne les requetes client, les identifie et appel les bonnes fonctions 
+ * \brief main
  *
  *\return 0
  */

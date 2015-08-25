@@ -1,8 +1,9 @@
 /**
  * \file af_inet_stream_clt.c
  * \brief Client, qui gere le menu principal du jeu de Question/reponse en communiquant avec le serveur
+ * \brief Client, send and receive request from the server
  * \author Dzik Timothee
- * \version finale
+ * \final version 
  *
  *
  */
@@ -17,12 +18,12 @@ char pseudo[50]="";
 
  /**
  * \fn void creation_message(char* message)
- * \brief Cette fonction permet communiquer avec le serveur
+ * \brief Function which allow user to send a request to the server
  *
  * \param char* message 
  * \author Dzik Timothee
  *
- * \return Buff la reponse du serveur
+ * \return Buff server response
  */  
 char* creation_message(char* message){
     int s_clt;
@@ -59,7 +60,7 @@ char* creation_message(char* message){
 
  /**
  * \fn void create_profil()
- * \brief Cette fonction va permettre au user de creer un profil
+ * \brief Create user profile
  *
  * \author Dzik Timothee
  * \return
@@ -81,7 +82,7 @@ void create_profil() {
 
  /**
  * \fn void identification()
- * \brief Cette fonction va permettre au user de creer un profil
+ * \brief Identification
  *
  * \author Dzik Timothee
  * \return
@@ -108,7 +109,7 @@ void identification() {
 
  /**
  * \fn void myProfile(const char pseudo[40]){
- * \brief Cette fonction va permettre de lister les caracteristiques d'un profil 
+ * \brief List current profile
  *
  * \author Dzik Timothee
  * \return
@@ -145,7 +146,7 @@ void myProfile(char pseudo[40]){
 
  /**
  * \fn void score_joueur(const char pseudo[40]){
- * \brief Cette fonction va permettre de lister le score d'un profil 
+ * \brief List user score
  *
  * \author Dzik Timothee
  * \return
@@ -182,7 +183,7 @@ void score_joueur(char pseudo[40]){
 
  /**
  * \fn void jouer()
- * \brief Cette fonction peremet de lancer le jeu dequestion/reponse 
+ * \brief Launch the game
  *
  * \author Dzik Timothee
  * \return
@@ -229,7 +230,7 @@ void jouer(){
 
  /**
  * \fn void bestScore()
- * \brief Cette fonction permet d'afficher a l'utilisateur le Best Score
+ * \brief Display bestscore
  *
  * \author Dzik Timothee
  *
@@ -241,7 +242,7 @@ void bestScore(){
 
  /**
  * \fn void lancerMenu()
- * \brief Cette fonction contient le menu principal
+ * \brief Menu
  *
  * \author Dzik Timothee
  *
@@ -272,7 +273,7 @@ void lancerMenu() {
     }
 }
 
-
+//main
 int main(void)
 {
     char d;
