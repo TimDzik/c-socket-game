@@ -1,0 +1,11 @@
+zimbra|0|0
+zim|0|0
+zimbis|0|0
+pseu|0|0
+test|0|0
+soukaina|1|0
+Geoffrey|0|1
+Corentin|0|0
+tim|6|3
+remitaffin|0|0
+timtimtim|1|4

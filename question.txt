@@ -1,0 +1,5 @@
+comment vas tu ?|A)bien B)nul C)non|C
+rouge vert ou noir ?|A)rouge B)vert C)noir|B
+Qui a gagne la coupe du monde de handball ?|A)fr B)it C)sp|A
+Ou allons nous|A)Paris B)Lens C)Madrid |C
+Quel est la couleur du cheval blanc d’Henri 4 ?|A)Gris B)Noir C)Brun |A
